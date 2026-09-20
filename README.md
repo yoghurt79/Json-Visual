@@ -1,2 +1,40 @@
 # Json-Visual
-A privacy-first, offline JSON formatter, minifier, tree viewer, and TypeScript type generator that runs entirely in your browser.
+SON-Visual 是一个完全运行在浏览器本地的 JSON 格式化与可视化工具，用于替代要求上传数据的在线 JSON 网站。所有解析和转换操作都在本机完成，不上传、不记录，也不需要联网。
+
+## 功能
+
+| 功能 | 说明 |
+| --- | --- |
+| JSON 格式化 | 按指定缩进整理 JSON，方便阅读和检查数据结构。 |
+| JSON 压缩 | 移除多余空格和换行，生成适合传输或存储的单行 JSON。 |
+| 语法错误提示 | 解析失败时显示具体原因以及错误所在的行号和列号。 |
+| 树形视图 | 以可展开、折叠的层级结构查看 JSON，不同类型的值使用不同颜色区分。 |
+| JSON 转 TypeScript | 自动生成 `interface` 和 `type` 声明，支持嵌套对象、数组、联合类型、`null` 和特殊字符键名。 |
+| 文件导入导出 | 支持拖拽 `.json` 文件读取，并可将格式化 JSON 或 TypeScript 声明下载到本地。 |
+| 本地隐私保护 | 数据仅在浏览器内处理，不需要登录，也不依赖远程接口。 |
+| 复制与清空 | 一键复制当前结果，或清空输入和全部输出内容。 |
+
+## 快速开始
+
+需要 Node.js 20.19+ 或 22.12+，以及 pnpm 10+。
+
+
+## 测试与构建
+
+```bash
+pnpm test     # 运行单元测试
+pnpm build    # 类型检查并构建到 dist/
+pnpm preview  # 本地预览生产构建
+```
+
+## 技术栈
+
+Vite、React 19、TypeScript、CodeMirror 6、Vitest 和原生 CSS。
+
+## 隐私说明
+
+项目不包含登录、广告、埋点、遥测或远程解析服务。JSON 内容始终留在当前浏览器中。
+
+## License
+
+[MIT](
